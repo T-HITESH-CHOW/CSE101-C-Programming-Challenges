@@ -1,0 +1,64 @@
+
+#include <stdio.h>
+
+int main()
+{
+    float amount, distance, discount;
+    float afterDiscount, delivery, finalAmount;
+    int type;
+
+    printf("Enter purchase amount: ");
+    scanf("%f", &amount);
+
+    printf("Enter customer type (1-Student, 2-Regular): ");
+    scanf("%d", &type);
+
+    printf("Enter delivery distance: ");
+    scanf("%f", &distance);
+
+    if (amount < 0 || distance < 0)
+    {
+        printf("Invalid input!\n");
+        return 1;
+    }
+
+    if (type == 1)
+    {
+        if (amount >= 2000)
+            discount = amount * 15 / 100;
+        else
+            discount = amount * 10 / 100;
+    }
+    else if (type == 2)
+    {
+        if (amount >= 3000)
+            discount = amount * 8 / 100;
+        else
+            discount = 0;
+    }
+    else
+    {
+        printf("Invalid customer type!\n");
+        return 1;
+    }
+
+    afterDiscount = amount - discount;
+
+    if (distance <= 5)
+        delivery = 40;
+    else if (distance <= 15)
+        delivery = 70;
+    else
+        delivery = 100;
+
+    finalAmount = afterDiscount + delivery;
+
+    printf("\n--- SMARTCART BILL ---\n");
+    printf("Purchase Amount = Rs. %.2f\n", amount);
+    printf("Discount Amount = Rs. %.2f\n", discount);
+    printf("Amount After Discount = Rs. %.2f\n", afterDiscount);
+    printf("Delivery Charge = Rs. %.2f\n", delivery);
+    printf("Final Payable Amount = Rs. %.2f\n", finalAmount);
+
+    return 0;
+}
