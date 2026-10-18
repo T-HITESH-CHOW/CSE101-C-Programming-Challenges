@@ -1,8 +1,6 @@
 Algorithm
 
-Open the program.
 
-Open the menu and offer to choose between the following: 'Linear Equation', 'Factorial', 'Quadratic Equation' and 'Exit'.
 
 Read the user input.
 
