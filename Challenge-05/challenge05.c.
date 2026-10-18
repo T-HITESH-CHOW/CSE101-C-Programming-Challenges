@@ -1,33 +1,87 @@
-# Challenge 05 – EQUATION SOLVER+
 
+#include <stdio.h>
+#include <math.h>
 
-## Problem Statement
+int main()
+{
+    int ch, n, i;
+    long long fact;
+    double a, b, c, d, x1, x2;
 
-We have to design a menu driven C program to solve linear equations, find factorials and solve quadratic equations. We keep on displaying the menu until the user hits the exit option.
+    do
+    {
+        printf("\n1. Linear Equation\n");
+        printf("2. Factorial\n");
+        printf("3. Quadratic Equation\n");
+        printf("4. Exit\n");
+        printf("Enter choice: ");
+        scanf("%d", &ch);
 
-## Algorithm
+        switch (ch)
+        {
+            case 1:
+                printf("Enter a and b: ");
+                scanf("%lf%lf", &a, &b);
 
-1. Initialize the program by printing the welcome message.
-2. Print the menu with the options.
-3. Read the input from the user.
-4. If the input is 1, then read the value of `a` and `b`.
-1. If `a` is not equal to zero, then we find the value of `x` as -b/a.
-2. Else, if both `a` and `b` are zero, then we print that there are infinitely many solutions.
-3. Else, we print that there is no solution.
-5. If the input is 2, then read the value of `n`
-1. If the value of `n` is less than 0 0r greater than 12, then print an error message.
-2. Else, compute the factorial and print it.
+                if (a != 0)
+                    printf("x = %.2f\n", -b / a);
+                else if (b == 0)
+                    printf("Infinite solutions\n");
+                else
+                    printf("No solution\n");
+                break;
 
-6. If the input is 3, then read the values of `a`, `b`, and `c`.
-1. If `a` is zero, print that it is not a quadratic equation.
-2. Else, find the discriminant i.e. `D = bb - 4ac`.
-- If the discriminant is positive, then print the two roots.
-- If the discriminant is zero, then print that there is one root given by (-b)/2a.
-- If the discriminant is negative, print that there are no real roots.
-7. If the input is 4, then print a message and exit.
-8. For any other input print a message that the input is invalid.
-9. Repeat steps 2-8 until the user selects exit.
-10. End the program.
+            case 2:
+                printf("Enter n (0 to 12): ");
+                scanf("%d", &n);
 
+                if (n < 0 || n > 12)
+                    printf("Invalid number\n");
+                else
+                {
+                    fact = 1;
+                    for (i = 1; i <= n; i++)
+                        fact = fact * i;
 
-I learnt how to make a menu driven program which kept on running until the user pressed exit. To implement this I used the loop in C. I learnt how to work with linear, quadratic equations and how to compute factorials using loops. I also worked on various edge cases and handled them.
+                    printf("Factorial = %lld\n", fact);
+                }
+                break;
+
+            case 3:
+                printf("Enter a, b and c: ");
+                scanf("%lf%lf%lf", &a, &b, &c);
+
+                if (a == 0)
+                    printf("Not a quadratic equation\n");
+                else
+                {
+                    d = b * b - 4 * a * c;
+
+                    if (d > 0)
+                    {
+                        x1 = (-b + sqrt(d)) / (2 * a);
+                        x2 = (-b - sqrt(d)) / (2 * a);
+                        printf("Roots = %.2f and %.2f\n", x1, x2);
+                    }
+                    else if (d == 0)
+                    {
+                        x1 = -b / (2 * a);
+                        printf("Equal roots = %.2f\n", x1);
+                    }
+                    else
+                        printf("No real roots\n");
+                }
+                break;
+
+            case 4:
+                printf("Program ended.\n");
+                break;
+
+            default:
+                printf("Invalid choice\n");
+        }
+
+    } while (ch != 4);
+
+    return 0;
+}
