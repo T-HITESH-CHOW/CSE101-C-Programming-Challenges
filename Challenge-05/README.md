@@ -1,47 +1,47 @@
-##Algorithm
+Algorithm
 
-Start the program.
+Open the program.
 
-Display the menu with four options: Linear Equation, Factorial, Quadratic Equation, and Exit.
+Open the menu and offer to choose between the following: 'Linear Equation', 'Factorial', 'Quadratic Equation' and 'Exit'.
 
-Read the user's choice.
+Read the user input.
 
-If the choice is 1:
+If the user input equals '1':
 
-Read the values of a and b.
+Read 'a' and 'b'.
 
-If a is not zero, calculate x = -b/a.
+If 'a' is not equal to 'zero', assign 'x' with the value of '(-b/a)' and print;
 
-If both a and b are zero, display infinitely many solutions.
+else if 'a' and 'b' equal 'zero', print 'infinitely many solutions';
 
-Otherwise, display no solution.
+else, print 'no solution'.
 
-If the choice is 2:
+If the user input equals '2':
 
-Read an integer n.
+Read a positive integer and assign it to variable 'n'.
 
-If n is outside 0 to 12, display an error.
+If 'n' is less than zero or greater than '12', print 'Error!'
 
-Otherwise, calculate the factorial using a loop and display the result.
+else, using a loop statement, calculate the 'Factorial' and print the result.
 
-If the choice is 3:
+If the user input equals '3':
 
-Read a, b, and c.
+Read 'a', 'b' and 'c'.
 
-If a is zero, display that it is not a quadratic equation.
+If 'a' equals '0', print 'Not a quadratic equation'.
 
-Otherwise, calculate the discriminant D = b*b - 4*a*c.
+Else, calculate 'D = bb - 4 a c' and assign the result to 'D'.
 
-If D is positive, calculate and display two real roots.
+If 'D' is greater than zero, using the quadratic formula, calculate two real roots of a quadratic equation and print the result.
 
-If D is zero, calculate and display the repeated root.
+If 'D' equals zero, using the quadratic formula, calculate one real root of a quadratic equation and print the result.
 
-If D is negative, display that there are no real roots.
+If 'D' is less than zero, print 'No real roots'.
 
-If the choice is 4, display the closing message and stop.
+If the user input equals '4', print the exiting message and finish the program.
 
-For any other choice, display an invalid-choice message.
+In all other cases, print 'Invalid choice'.
 
-Repeat the menu until the user selects Exit.
+Go back to previous menu.
 
-End the program.
+Using loop statement, repeat all the steps above.
