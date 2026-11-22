@@ -1,0 +1,105 @@
+==========================================================
+             WATERWISE - CAMPUS WATER AUDIT               
+                 Track. Detect. Conserve.                 
+==========================================================
+
+========== ENTER WATER DATA ==========
+Enter authorised readings, or clearly labelled simulated readings for testing.
+
+--- Academic Block ---
+Day 1 consumption (0-50000 litres): Day 2 consumption (0-50000 litres): Day 3 consumption (0-50000 litres): Day 4 consumption (0-50000 litres): Day 5 consumption (0-50000 litres): Day 6 consumption (0-50000 litres): Day 7 consumption (0-50000 litres): Daily target for Academic Block (100-50000 litres): 
+--- Hostel ---
+Day 1 consumption (0-50000 litres): Day 2 consumption (0-50000 litres): Day 3 consumption (0-50000 litres): Day 4 consumption (0-50000 litres): Day 5 consumption (0-50000 litres): Day 6 consumption (0-50000 litres): Day 7 consumption (0-50000 litres): Daily target for Hostel (100-50000 litres): 
+--- Library ---
+Day 1 consumption (0-50000 litres): Day 2 consumption (0-50000 litres): Day 3 consumption (0-50000 litres): Day 4 consumption (0-50000 litres): Day 5 consumption (0-50000 litres): Day 6 consumption (0-50000 litres): Day 7 consumption (0-50000 litres): Daily target for Library (100-50000 litres): 
+--- Cafeteria ---
+Day 1 consumption (0-50000 litres): Day 2 consumption (0-50000 litres): Day 3 consumption (0-50000 litres): Day 4 consumption (0-50000 litres): Day 5 consumption (0-50000 litres): Day 6 consumption (0-50000 litres): Day 7 consumption (0-50000 litres): Daily target for Cafeteria (100-50000 litres): 
+--- Sports Complex ---
+Day 1 consumption (0-50000 litres): Day 2 consumption (0-50000 litres): Day 3 consumption (0-50000 litres): Day 4 consumption (0-50000 litres): Day 5 consumption (0-50000 litres): Day 6 consumption (0-50000 litres): Day 7 consumption (0-50000 litres): Daily target for Sports Complex (100-50000 litres): 
+All water readings and targets have been recorded.
+
+==================== MAIN MENU ====================
+1. Display Water Data
+2. Generate Audit Report
+3. Rank Zones by Excess
+4. Conservation Actions
+5. Exit
+Enter your choice: 
+================ WATER CONSUMPTION MATRIX (litres) ================
+Campus Zone        Day1     Day2     Day3     Day4     Day5     Day6     Day7     Target
+Academic Block     1000     1100     1200     1000     1500     1400     1300     1200
+Hostel             1500     1600     1700     1800     1900     2000     2100     1700
+Library            800      850      900      950      1000     1050     1100     1200
+Cafeteria          2000     2100     2050     3000     2200     2300     2400     2200
+Sports Complex     900      900      900      900      900      900      900      1000
+
+==================== MAIN MENU ====================
+1. Display Water Data
+2. Generate Audit Report
+3. Rank Zones by Excess
+4. Conservation Actions
+5. Exit
+Enter your choice: 
+==================== WATER AUDIT REPORT ====================
+Zone                    Weekly    Average       Peak  PeakDay  OverLim   Spikes   Alerts
+Academic Block            8500    1214.29       1500        5        3        1        3
+  Total excess: 600 litres
+Hostel                   12600    1800.00       2100        7        4        0        4
+  Total excess: 1000 litres
+Library                   6650     950.00       1100        7        0        0        0
+  Total excess: 0 litres
+Cafeteria                16050    2292.86       3000        4        3        1        3
+  Total excess: 1100 litres
+Sports Complex            6300     900.00        900        1        0        0        0
+  Total excess: 0 litres
+
+==================== MAIN MENU ====================
+1. Display Water Data
+2. Generate Audit Report
+3. Rank Zones by Excess
+4. Conservation Actions
+5. Exit
+Enter your choice: 
+================ ZONE RANKING BY TOTAL EXCESS ================
+Zone(s) with greatest excess (1100 litres): Cafeteria; 
+
+Ranked zones (ties share the same rank):
+Rank 3 - Academic Block      : 600 litres excess
+Rank 2 - Hostel              : 1000 litres excess
+Rank 4 - Library             : 0 litres excess
+Rank 1 - Cafeteria           : 1100 litres excess
+Rank 4 - Sports Complex      : 0 litres excess
+
+==================== MAIN MENU ====================
+1. Display Water Data
+2. Generate Audit Report
+3. Rank Zones by Excess
+4. Conservation Actions
+5. Exit
+Enter your choice: 
+================ CONSERVATION ACTIONS ================
+
+Academic Block (excess: 600 litres)
+- Check for a leak or unexpected water use around the flagged days.
+- Prioritise a water audit and prepare a reduction plan.
+
+Hostel (excess: 1000 litres)
+- Prioritise a water audit and prepare a reduction plan.
+
+Library (excess: 0 litres)
+- Maintain current good water-saving practices.
+
+Cafeteria (excess: 1100 litres)
+- Check for a leak or unexpected water use around the flagged days.
+- Prioritise a water audit and prepare a reduction plan.
+
+Sports Complex (excess: 0 litres)
+- Maintain current good water-saving practices.
+
+==================== MAIN MENU ====================
+1. Display Water Data
+2. Generate Audit Report
+3. Rank Zones by Excess
+4. Conservation Actions
+5. Exit
+Enter your choice: Thank you for using WATERWISE. Conserve water!
