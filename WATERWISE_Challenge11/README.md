@@ -1,32 +1,5 @@
 # Challenge 11 – WATERWISE
 
-**Course:** CSE101 – Fundamentals of Computing and C Programming  
-**Challenge:** CODE2THINK Challenge 11 – WATERWISE  
-**Theme:** Track. Detect. Conserve.
-
-## Problem Statement / Question
-
-A university wants to reduce water wastage across its campus. Develop a menu-driven C program that analyses seven days of water-consumption readings from five campus zones, detects unusual usage, identifies zones that exceed their daily targets, and recommends where conservation efforts should begin.
-
-The five zones are:
-1. Academic Block
-2. Hostel
-3. Library
-4. Cafeteria
-5. Sports Complex
-
-For every zone, the program stores seven daily readings and one daily target. It displays the consumption matrix, calculates weekly statistics, detects over-limit days and sudden spikes, counts unique alert days, ranks zones by excess consumption (including ties), and displays conservation recommendations.
-
-## Data Rules
-
-- `#define ZONES 5` and `#define DAYS 7`.
-- Consumption is stored in `int usage[ZONES][DAYS]`.
-- Targets are stored in `int dailyTarget[ZONES]`.
-- Valid reading: 0–50,000 litres.
-- Valid daily target: 100–50,000 litres.
-- Invalid values are rejected and requested again.
-- Use authorised campus readings. If unavailable, use clearly labelled simulated readings for testing. Never describe simulated values as actual campus measurements.
-
 ## Algorithm
 
 1. Start the program.
@@ -48,51 +21,3 @@ For every zone, the program stores seven daily readings and one daily target. It
 12. Repeat the menu until the user selects Exit.
 13. Stop.
 
-## Pointer Use
-
-- `&usage[zone][0]` passes the address of the first reading in a zone to the analysis functions.
-- `*(zoneUsage + day)` accesses each day's reading using pointer arithmetic.
-- Output values are returned through pointer parameters, for example `*total = sum` and `*average = (float)(*total) / DAYS`.
-
-## Required Functions
-
-| Function | Purpose |
-|---|---|
-| `inputWaterData()` | Reads and validates all readings and targets. |
-| `displayWaterData()` | Displays the complete consumption matrix and targets. |
-| `calculateZoneStats()` | Calculates total, average, peak reading and peak day using pointers. |
-| `detectWaterAlerts()` | Calculates over-limit days, excess litres, spikes and unique alert days using pointers. |
-| `generateAuditReport()` | Calls the analysis functions for each zone and prints the audit report. |
-| `rankZones()` | Ranks zones by total excess and handles ties. |
-| `displayConservationActions()` | Displays practical recommendations for each zone. |
-
-## How to Compile and Run
-
-Using GCC:
-
-```bash
-gcc -std=c11 -Wall -Wextra -pedantic challenge11.c -o waterwise
-./waterwise
-```
-
-On Windows with MinGW:
-
-```bash
-gcc -std=c11 -Wall -Wextra -pedantic challenge11.c -o waterwise.exe
-waterwise.exe
-```
-
-## Testing
-
-The `output/` folder contains a sample run and a test checklist. The sample readings are **simulated data for testing only**, not actual SRM University-AP campus measurements. The assignment asks for at least seven test cases; this submission records eight cases, including boundary checks for spike detection and invalid input.
-
-## Files
-
-- `challenge11.c` – complete source code.
-- `output/sample_output.txt` – sample execution using simulated readings.
-- `output/testing_evidence.md` – test cases and expected behaviours.
-- `action-note/water_conservation_action_note_template.md` – fill this using an observation you are permitted to make. Do not claim an observation you did not personally make.
-
-## What I Learned
-
-I used pointer arithmetic to access the seven readings of each zone. Passing the address of the first array element lets the analysis functions process a zone's readings without needing a separate array. Pointer parameters also allow the functions to return multiple calculated results to the calling function.
